@@ -1,0 +1,73 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# aocr
+
+<!-- badges: start -->
+
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+
+<!-- badges: end -->
+
+aocr is fast and convenient way to download your [Advent of Code](https://adventofcode.com/2021/auth/login) puzzle input. Inspired by libraries like [aocd]() and [adventdrob](). 
+
+## Installation
+
+You can install the development version of aocr from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("botan/aocr")
+```
+
+## Usage
+
+Puzzle inputs vary by user. You must set your AOC_SESSION in .Renvrion file. Here's a step by step guide to get your session cookie:
+
+1. Log in to [Advent of Code](https://adventofcode.com/2021/auth/login) on your preferred web browser.
+
+1. Right-click on the webpage and click "Inspect" to open the developer console.
+
+1. Go the Network tab and reload to page.
+
+1. Click the "adventofcode.com" request.
+
+1. Go the Cookie tab under the Request Headers.
+
+1. You will find your Cookie as `session=<copy here>`.
+
+1. Copy that session ID and save inside your .Renviron as `AOC_SESSION=<paste here>`. If you have any trouble with finding your .Renviron file, you can use `usethis::edit_r_environ()`.
+
+1. Restart R session.
+
+This is a basic example which shows you how to get your input:
+
+```{r example, error=TRUE}
+library(aocr)
+library(fs)
+
+dir_ls()
+
+Sys.Date()
+
+input()
+
+input(2021, 1)
+
+dir_ls()
+
+input <- scan("input01.txt")
+head(input)
+```
