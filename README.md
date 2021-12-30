@@ -12,7 +12,9 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 
 aocr is fast and convenient way to download your [Advent of
 Code](https://adventofcode.com/2021/auth/login) puzzle input. Inspired
-by libraries like [aocd]() and [adventdrob]().
+by libraries like
+[aocd](https://github.com/wimglenn/advent-of-code-data) and
+[adventdrob](https://github.com/dgrtwo/adventdrob).
 
 ## Installation
 
