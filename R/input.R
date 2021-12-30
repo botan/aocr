@@ -1,3 +1,27 @@
+#' Get Advent of Code input
+#'
+#' By default the `input()` downloads current date
+#' \href{https://adventofcode.com/}{Advent of Code} puzzle input.
+#' Also can be used for previous puzzles.
+#'
+#' @param year Contest year. The default value is current day.
+#' @param day Day of the puzzle. The default value is current day.
+#' @param path File path to save input data.
+#'   The default vale is "input\{day\}.txt".
+#' @param verbose Logical flag for printing HTTP response.
+#'   The default value is `TRUE`.
+#' @param open_file Logical flag for open to saved file.
+#'   The default value is `FALSE`.
+#'
+#' @return The file path where input saved.
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' input()
+#' input(2021, 1)
+#' purrr::walk(1:25, ~input(2020, .x))
+#' }
 input <- function(year = curr_year(),
                   day = curr_day(),
                   path = paste0("input", day, ".txt"),
