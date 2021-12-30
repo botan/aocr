@@ -15,3 +15,5 @@ Imports:
     httr2,
     rlang,
     utils
+URL: https://github.com/botan/aocr
+BugReports: https://github.com/botan/aocr/issues
