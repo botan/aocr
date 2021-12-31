@@ -1,6 +1,6 @@
-curr_day <- function() as.integer(format(Sys.Date(), "%d"))
-curr_month <- function() as.integer(format(Sys.Date(), "%m"))
-curr_year <- function() as.integer(format(Sys.Date(), "%Y"))
+curr_day <- function() as.integer(format(Sys.time(), "%d", tz = "EST"))
+curr_month <- function() as.integer(format(Sys.time(), "%m", tz = "EST"))
+curr_year <- function() as.integer(format(Sys.time(), "%Y", tz = "EST"))
 
 valid_days <- function() seq_len(25)
 valid_years <- function() {
